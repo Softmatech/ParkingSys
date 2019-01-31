@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ffe4cf47-ce92-4974-9140-4de6a613759e">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="224"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     personnes_view.`ID` AS personnes_view_ID,
+     personnes_view.`NOM` AS personnes_view_NOM,
+     personnes_view.`PRENOM` AS personnes_view_PRENOM,
+     personnes_view.`SEXE` AS personnes_view_SEXE,
+     personnes_view.`DATE_NAISSANCE` AS personnes_view_DATE_NAISSANCE,
+     personnes_view.`NATIONALITE` AS personnes_view_NATIONALITE,
+     personnes_view.`ETAT_CIVIL` AS personnes_view_ETAT_CIVIL,
+     personnes_view.`VILLE` AS personnes_view_VILLE,
+     personnes_view.`ID_DOCUMENT` AS personnes_view_ID_DOCUMENT,
+     personnes_view.`nif` AS personnes_view_nif,
+     personnes_view.`TELEPHONE` AS personnes_view_TELEPHONE,
+     personnes_view.`EMAIL` AS personnes_view_EMAIL,
+     personnes_view.`ADRESSE` AS personnes_view_ADRESSE,
+     personnes_view.`ACTIVITES` AS personnes_view_ACTIVITES
+FROM
+     `personnes_view` personnes_view where id = $P{id}]]>
+	</queryString>
+	<field name="personnes_view_ID" class="java.lang.String"/>
+	<field name="personnes_view_NOM" class="java.lang.String"/>
+	<field name="personnes_view_PRENOM" class="java.lang.String"/>
+	<field name="personnes_view_SEXE" class="java.lang.String"/>
+	<field name="personnes_view_DATE_NAISSANCE" class="java.sql.Date"/>
+	<field name="personnes_view_NATIONALITE" class="java.lang.String"/>
+	<field name="personnes_view_ETAT_CIVIL" class="java.lang.String"/>
+	<field name="personnes_view_VILLE" class="java.lang.String"/>
+	<field name="personnes_view_ID_DOCUMENT" class="java.lang.String"/>
+	<field name="personnes_view_nif" class="java.lang.String"/>
+	<field name="personnes_view_TELEPHONE" class="java.lang.String"/>
+	<field name="personnes_view_EMAIL" class="java.lang.String"/>
+	<field name="personnes_view_ADRESSE" class="java.lang.String"/>
+	<field name="personnes_view_ACTIVITES" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="572" height="122" uuid="cb8c95b6-625f-4a31-99d7-1c05131fa89f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="22" width="570" height="33" uuid="994f0d5d-13b3-43b9-9463-96ddb22c7b40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Games Systeme de Déclaration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="572" height="20" uuid="047c4191-e283-44e5-894b-33236a88a667"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Adresse : 24, Rue Fourgère Delmas 73]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="75" width="572" height="20" uuid="e5bddc4d-7d53-4681-a67b-64c5200e551d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Courrier : gamesgroupeht@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="95" width="572" height="20" uuid="9993200c-4ee4-41e2-8a5f-ca84fabbe1d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Telephone : (509) 4301 1736]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="414" y="15" width="156" height="20" backcolor="#CCCCCC" uuid="cef59041-46d9-4071-9320-e817410fe5c9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="414" y="15" width="154" height="20" uuid="1dc3ddf4-a552-4d10-b865-62fe8c4efa71"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profile du Déclarant]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="316" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="572" height="58" backcolor="#CCCCCC" uuid="7b566545-592f-4d93-9ee8-39c00d547d6c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="102" y="60" width="143" height="20" uuid="36cec475-cdae-4b89-973c-4f60149cd2e5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_NOM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="79" width="183" height="20" uuid="db19364d-6567-4620-8605-84c20cf8a66b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_PRENOM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="98" width="72" height="20" uuid="bbcf1f6a-f1da-48f4-8295-57f03693ff77"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_SEXE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="117" width="185" height="20" uuid="ef78e10c-be7f-4c97-8715-94e8f03fec69"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_DATE_NAISSANCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="136" width="237" height="20" uuid="b19a5ea9-dcc8-4f83-b010-9430a14de26b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_NATIONALITE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="155" width="213" height="20" uuid="a63a1bbc-9a69-47bf-9e02-1ee50821f791"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_ETAT_CIVIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="174" width="143" height="20" uuid="340546cd-c1e6-47df-a827-e7ab8a5d1b1a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_VILLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="193" width="205" height="20" uuid="a3a5faac-eee1-4dba-b5d4-cae7a6355a9f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_ID_DOCUMENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="231" width="196" height="20" uuid="33a4c267-e0ee-48ff-ac73-80d00929f8d3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_TELEPHONE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="250" width="196" height="20" uuid="f7b55f33-a854-4dcb-af1a-c11e7b31e690"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="269" width="470" height="20" uuid="82daec4f-682c-4b64-9508-63321d7cb2a1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_ADRESSE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="288" width="469" height="20" uuid="8e6651ee-e30f-4830-8bf3-b8712d54878e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_ACTIVITES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="0" width="127" height="58" uuid="0fb4506b-128d-46ee-84a8-85514541541e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Code de la Personnes : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="103" height="20" uuid="98b01e79-3a54-49a1-9316-9de5c91529fd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nom : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="79" width="103" height="20" uuid="18111990-4692-4d6b-a79e-d0d77ea30508"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prenom : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="103" height="20" uuid="ebba8025-b8e5-4a7e-adc8-e6d299e63f7f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexe : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="117" width="103" height="20" uuid="3f0bb4d6-7a79-45fc-bcd5-b6d2d1b2e9b6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date de Naissance : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="136" width="103" height="20" uuid="97390c51-3cd4-4af6-aac6-09485bf75899"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nationalité : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="155" width="103" height="20" uuid="fd75e652-ab3e-4899-8aa8-70d3abb548aa"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Etat Civil : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="174" width="103" height="20" uuid="54ec1b69-9e6d-4bf3-a14b-b60c44f4a587"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ville : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="193" width="103" height="20" uuid="ab839ba0-b47a-4ddc-a3dd-9b7463255544"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No de Document : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="231" width="103" height="20" uuid="a26c3112-df60-4e53-9b5e-038e64d2dea9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telephone : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="250" width="103" height="20" uuid="1d13feda-f96f-48c6-aa1c-0c042f487769"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="269" width="103" height="20" uuid="b1c1fae5-7934-4b5d-8d94-1053950b0cc8"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adresse : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="288" width="103" height="20" uuid="73449004-4564-4557-8b02-19ecd783a8f4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Activités : ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="59" width="572" height="1" uuid="331665ff-c8f2-4b83-98bf-71bcb09a4276"/>
+			</line>
+			<line>
+				<reportElement x="0" y="311" width="572" height="1" uuid="f9ff0dc3-debd-4d1a-be28-da2ac55e5ddb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="212" width="103" height="20" uuid="7f84a261-d9cc-4ced-84f2-aebec83ee3cd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIF : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="212" width="205" height="20" uuid="ab1efad3-3411-4150-b55f-78c5c9a2c19b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnes_view_nif}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="128" y="10" width="244" height="48" uuid="1d02d8d0-d445-460b-b54e-5c55e62e972b"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" textPosition="bottom">
+					<jr:codeExpression><![CDATA[$F{personnes_view_ID}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
